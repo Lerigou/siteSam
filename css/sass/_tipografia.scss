@@ -1,0 +1,104 @@
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: $orange;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link {
+    padding: 12px 50px;
+    font-size: 20px;
+    position: relative;
+    color: $orange;
+}
+
+.links {
+    text-decoration: underline $orange;
+}
+
+h1 {
+    font-size: 96px;
+    line-height: 100%;
+}
+
+@media screen and (max-width: 1150px){
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 48px;
+    } 
+
+    h3 {
+        font-size: 32px;
+    }
+}
+
+h2 {
+    font-size: 56px;
+    line-height: 110%;
+}
+
+h3 {
+    font-size: 40px;
+    line-height: 110%;
+}
+
+h4 {
+    font-size: 32px;
+    line-height: 120%;
+}
+
+h5 {
+    font-size: 24px;
+    line-height: 140%;
+}
+
+h6 {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+::selection {
+    background-color: $yellow-light-super
+  }
+
+.text-center {
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 64px;
+    font-size: 18px;
+    padding: 16px 24px;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100px;
+        height: 48px;
+        border:  1px solid $black;
+        transform: translate(2%, 6%);
+        transition: 1s ease;
+    }
+
+}
+
