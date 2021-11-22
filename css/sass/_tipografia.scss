@@ -1,22 +1,19 @@
 h1, h2, h3, h4, h5, h6, p, a {
-    font-family: 'Barlow Condensed', sans-serif;
-    color: $orange;
-    font-weight: 300;
+    font-family: 'Poppins', normal;
+    font-weight: 200;
+    color: $black;
 }
 
 a {
     text-decoration: none;
-}
+    font-size: 18px;
+    line-height: 150%;
+    color: $black;
+    transition: .5s ease;
 
-.link {
-    padding: 12px 50px;
-    font-size: 20px;
-    position: relative;
-    color: $orange;
-}
-
-.links {
-    text-decoration: underline $orange;
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 h1 {
@@ -63,9 +60,28 @@ h6 {
     line-height: 150%;
 }
 
-::selection {
-    background-color: $yellow-light-super
-  }
+@media screen and (max-width: 960px){
+    h1 {
+        font-size: 64px;
+    }
+
+    h2 {
+        font-size: 48px;
+    } 
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+}
+
 
 .text-center {
     text-align: center;
@@ -79,26 +95,6 @@ h6 {
     text-align: left;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 64px;
-    font-size: 18px;
-    padding: 16px 24px;
-    position: relative;
-
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100px;
-        height: 48px;
-        border:  1px solid $black;
-        transform: translate(2%, 6%);
-        transition: 1s ease;
-    }
-
+.bold {
+    font-weight: bold;
 }
-

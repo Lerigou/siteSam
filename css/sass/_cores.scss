@@ -1,3 +1,9 @@
+$rosa: #F3E0FF;
+$branco: #ffffff;
+$branco-light: #ffffff77;
+$preto: #000000;
+$preto-light: #00000072;
+
 // Amarelos
 $yellow: #ffd427;
 $yellow-light: #fad957;
@@ -30,3 +36,7 @@ $white: #fff;
 $white-sam: #EDE1E1;
 $black: #000;
 $brown: #826060;
+
+.yellow-light {
+    background-color: $yellow-light;
+}
