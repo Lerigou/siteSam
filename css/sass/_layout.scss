@@ -166,6 +166,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .sobre {
@@ -190,18 +191,22 @@
     margin: 0px 20px;
 }
 
-.container-item:nth-child(2) {
-    flex-grow: 1;
+.container-item:not(.areas):nth-child(2) {
     margin: 40px 0px;
 
     img {
-        max-width: 450px;
+        max-width: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 15px;
     }
 
+}
+
+.areas {
+  max-width: 500px;
+  margin: 0px 20px;
 }
 
 .logo-sam {
@@ -213,9 +218,11 @@
     }
 
 @media screen and (max-width: 1150px) {
-    .container-item:nth-child(2) {
+    .container-item:not(.areas):nth-child(2) {
+      flex-grow: 1;
+
         img {
-            max-width: 300px;
+            max-width: 200px;
         }
     }
 
@@ -225,6 +232,10 @@
 
     .slogan {
       text-align: center;
+    }
+
+    .areas {
+      margin-top: $gap-2;
     }
 }
 
@@ -238,6 +249,91 @@
     align-items: center;
 }
 
+.menor {
+  max-width: 600px;
+}
+
+.telaToda {
+  width: 100%;
+}
+
+.perspective {
+  transform:
+    scale(0.75)
+    rotateY(-30deg)
+    rotateX(45deg)
+    translateZ(4.5rem);
+  transform-origin: 50% 100%;
+  transform-style: preserve-3d;
+  transition: 1s ease transform;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    transform: scale(1) translateZ(0);
+  }
+
+  img {
+    max-width: 100px;
+  }
+
+}
+
+.perspective-top {
+  position: absolute;
+  z-index: 0;
+  transform: translateZ(4rem);
+  transition: all 500ms;
+
+  &:hover {
+    transform: translateZ(0);
+  }
+}
+
+.perspective-middle {
+  position: absolute;
+  z-index: -1;
+
+  &:hover {
+    transform: translateZ(0);
+  }
+}
+
+.perspective-bottom {
+position: absolute;
+z-index: -2;
+transform: translateZ(-4rem);
+
+&:hover {
+  transform: translateZ(0);
+}
+
+img {
+  filter: drop-shadow(0px 0px 32px rgba(0,0,0,0.5));
+}
+
+}
+
+@media screen and (max-width: 1150px) {
+  .perspective {
+    transform: rotateY(0) rotateX(0) translateZ(0);
+    width: 100%;
+  }
+
+  .perspective-top, .perspective-middle, .perspective-bottom {
+   transform: translateZ(0);
+  }
+}
+
+.download {
+  background-color: $yellow-light;
+  padding: 30px;
+  border-radius: 65px;
+}
+
+// FOOTER
 footer {
     background-color: $yellow-light;
     color: $black;
@@ -267,7 +363,6 @@ footer {
   max-width: 100px;
 }
 
-
 @media screen and (max-width: 1150px) {
     .list-item, .footer-item {
         display: grid;
@@ -293,3 +388,9 @@ footer {
 .wave {
   background-color: $white;
 }
+
+
+.escala {
+  transform: scale(.8);
+}
+
